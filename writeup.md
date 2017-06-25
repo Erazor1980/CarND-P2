@@ -103,23 +103,37 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 91.5%.
 
-For the first image, the model is relatively sure that this is a 50 km/h (probability of 0.26, the second best vote is 0.06 for 100 km/h ). The top five soft max probabilities were
+For the first image, the model is relatively sure that this is a 50 km/h sign (probability of 0.26, the second best vote has 0.06 for 100 km/h ). The top five soft max probabilities are
 
 | Probability         	|     Prediction	        		| 
 |:---------------------:|:---------------------------------------------:| 
 | .26         		| 50 km/h   					| 
-| .06     		| 7 						|
-| .05			| 40						|
-| .01	      		| 31					 	|
-| .01			| 37      					|
+| .06     		| 100 km/h					|
+| .05			| Roundabout mandatory				|
+| .01	      		| Wild animals crossing			 	|
+| .01			| Go straight or left				|
 
 
-For the second image ... 
+For the second image, the model is sure that this is a stop sign (0.46, second best vote has 0.15). The top five soft max probabilities are
+
 | Probability         	|     Prediction	        		| 
 |:---------------------:|:---------------------------------------------:| 
-| .26         		| 50 km/h   					| 
-| .06     		| 7 						|
-| .05			| 40						|
-| .01	      		| 31					 	|
-| .01			| 37      					|
+| .46         		| Stop       					| 
+| .15     		| Turn right ahead				|
+| .07			| Keep right					|
+| .03	      		| Yield					 	|
+| .004			| No entry      					|
+
+For the third image, the model has a wrong prediction: no entry with 0.22 probability, the second best vote would the correct one though (0.18 for the no passing sign)! The top five soft max probabilities are
+
+| Probability         	|     Prediction	        		| 
+|:---------------------:|:---------------------------------------------:| 
+| .22         		| No entry (wrong)				| 
+| .18     		| No passing (correct)				|
+| .05			| Go straight or left				|
+| .05	      		| Slippery Road				 	|
+| .02			| End of no passing				|
+
+For the fourth and fifth images, the model is pretty sure what they are:
+0.45 for priority road (second best only 0.03!) and 0.57 for Right-of-way at the next intersection (second best 0.36 for the pedestrians sign).
 
